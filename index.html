@@ -1,48 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Flipper Practice</title>
     <style>
-        body{
-            margin: 0 auto;
-        }
-        #red{
-            background-color: red;
-        }
-        #green{
-            background-color: green;
-        }
-        #blue{
-            background-color: blue;
-        }
-        button{
-            border: 2px solid black;
-            border-radius: 50px;
-            padding: 5px;
-            width: 70px;
-        }
-        .header{
-            padding: 10px;
-            border: 2px solid black;
-            display: flex;
-            justify-content: space-between;
-            background-color: black;
-            color: white;
-        }
+      body {
+        margin: 0 auto;
+      }
+      #red {
+        background-color: red;
+      }
+      #green {
+        background-color: green;
+      }
+      #blue {
+        background-color: blue;
+      }
+      button {
+        border: 2px solid black;
+        border-radius: 50px;
+        padding: 5px;
+        width: 70px;
+      }
+      .header {
+        padding: 10px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        color: white;
+      }
+      input {
+        padding: 5px;
+        border-radius: 50px;
+      }
+      .palindrome {
+        background-color: aquamarine;
+        border-color: cadetblue;
+        padding: 20px;
+        margin-bottom: 5px;
+      }
+      .quote-generator {
+        background-color: antiquewhite;
+        border-color: cadetblue;
+        padding: 20px;
+        margin-bottom: 5px;
+      }
+      .stop-watch {
+        background-color: burlywood;
+        border-color: cadetblue;
+        padding: 20px;
+        margin-bottom: 5px;
+      }
+      .todolist {
+        background-color: burlywood;
+        border-color: cadetblue;
+        padding: 20px;
+        margin-bottom: 5px;
+      }
+      #quote {
+        padding: 10px;
+        background-color: blanchedalmond;
+        border-color: cadetblue;
+      }
     </style>
-   
-</head>
-<body>
-   <section class="header">
-    <h1>This is demo color flipper practice</h1>
-    <button id="red" onclick="setColor('red')"></button>
-    <button id="green" onclick="setColor('green')"></button>
-    <button id="blue" onclick="setColor('blue')"></button>
-    <button id="random" onclick="randomColor('random')"></button>
-   </section>
+  </head>
+  <body>
+    <section class="header">
+      <h1>This is demo color flipper header</h1>
+      <button id="red" onclick="setColor('red')"></button>
+      <button id="green" onclick="setColor('green')"></button>
+      <button id="blue" onclick="setColor('blue')"></button>
+      <button id="random" onclick="randomColor('random')"></button>
+    </section>
+
+    <section class="palindrome">
+      <h2>This is plindrome checker inside</h2>
+      <input id="input" type="text" placeholder="Type Something" />
+      <button onclick="check()">check</button>
+    </section>
+
+    <section class="quote-generator">
+      <h2>This is random quote generator inside</h2>
+      <p id="quote"></p>
+      <button onclick="generate()">Generate!</button>
+    </section>
+
+    <section class="stop-watch">
+      <h3>Stop Watch</h3>
+      <h1 id="time">00:00</h1>
+      <button onclick="startClock()">Start</button>
+      <button onclick="stopClock()">Stop</button>
+      <button onclick="resetClock()">Reset</button>
+    </section>
+
+    <section class="todolist">
+        <h1>TODO List</h1>
+        <h2>Items</h2>
+        <div id="items"></div>
+        <input id="itemInput" type="text" placeholder="Add an item" />
+        <button onclick="addItem()">Add Item</button>
+    </section>
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
